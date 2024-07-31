@@ -63,7 +63,7 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>3.1.0</version>
                 <configuration>
-                    <mainClass>com.mycompany.gestao_de_treinamentos.modelo.conexao.ConexaoMySQL</mainClass>
+                    <mainClass>com.virtuatech.gestao_de_treinamentos.modelo.conexao.ConexaoMySQL</mainClass>
                 </configuration>
             </plugin>
         </plugins>
