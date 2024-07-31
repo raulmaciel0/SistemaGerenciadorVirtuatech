@@ -27,9 +27,10 @@ public class SQLFormatoInserir<T> implements SQLFormato{
             
             String atributo = removerUltimoCaracter(atributos.toString());
             String ponto = removerUltimoCaracter(pontos.toString());
-            String SQL = String.format("INSERT INTO tabela %s (%s) VALUES(%s)" , t.getSimpleName(), atributo,  ponto);
+            String SQL = String.format("INSERT INTO %s (%s) VALUES(%s)" , t.getSimpleName(), atributo,  ponto);
             
             return SQL;
+            
         }catch(Exception e){
             throw new RuntimeException(e);
         }      
