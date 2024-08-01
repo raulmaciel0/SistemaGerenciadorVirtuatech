@@ -1,14 +1,21 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package com.virtuatech.gestao_de_treinamentos.modelo.util;
 
 import java.lang.reflect.Field;
 import java.util.Set;
 import org.reflections.ReflectionUtils;
 
-public class SQLFormatoInserir<T> implements SQLFormato{
-
+/**
+ *
+ * @author Renato
+ */
+public class SQLFormatoAtualizar<T> implements SQLFormato{
     private Class<T> t;
 
-    public SQLFormatoInserir(Class<T> t) {
+    public SQLFormatoAtualizar(Class<T> t) {
         this.t = t;
     }
     
@@ -17,17 +24,17 @@ public class SQLFormatoInserir<T> implements SQLFormato{
     public String formato() {                
         Set<Field> campos = ReflectionUtils.getFields(this.t, e -> true);
         StringBuilder atributos = new StringBuilder();
-        StringBuilder pontos = new StringBuilder();
         
         try{
             for(Field campo : campos){
-                atributos.append(campo.getName()).append(",");
-                pontos.append("?,");
+                if(campo.getName().equalsIgnoreCase("id")) continue;
+                atributos.append(campo.getName()).append("=?,");
             } 
             
             String atributo = removerUltimoCaracter(atributos.toString());
-            String ponto = removerUltimoCaracter(pontos.toString());
-            String SQL = String.format("INSERT INTO %s (%s) VALUES(%s)" , t.getSimpleName(), atributo,  ponto);
+            String SQL = String.format("UPDATE %s SET %s WHERE id = ?" , t.getSimpleName(), atributo);
+            
+            System.out.println("SQL -->>>" + SQL);
             
             return SQL;
             
@@ -45,3 +52,4 @@ public class SQLFormatoInserir<T> implements SQLFormato{
     }
     
 }
+

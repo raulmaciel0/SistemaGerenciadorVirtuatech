@@ -1,6 +1,7 @@
 com\virtuatech\gestao_de_treinamentos\modelo\conexao\ConexaoMySQL.class
 com\virtuatech\gestao_de_treinamentos\modelo\entidade\HistoricoTreinamento$HistoricoTreinamentoBuilder.class
 com\virtuatech\gestao_de_treinamentos\modelo\entidade\HistoricoTreinamento.class
+com\virtuatech\gestao_de_treinamentos\modelo\util\SQLFormato.class
 com\virtuatech\gestao_de_treinamentos\modelo\entidade\PermissaoUsuario$PermissaoUsuarioBuilder.class
 com\virtuatech\gestao_de_treinamentos\modelo\entidade\ListaDeTreinamento$ListaDeTreinamentoBuilder.class
 com\virtuatech\gestao_de_treinamentos\modelo\entidade\Permissao.class
@@ -8,10 +9,15 @@ com\virtuatech\gestao_de_treinamentos\modelo\entidade\Usuario.class
 com\virtuatech\gestao_de_treinamentos\modelo\entidade\Cliente$ClienteBuilder.class
 com\virtuatech\gestao_de_treinamentos\modelo\entidade\Permissao$PermissaoBuilder.class
 com\virtuatech\gestao_de_treinamentos\modelo\entidade\PermissaoUsuario.class
+com\virtuatech\gestao_de_treinamentos\modelo\repositorio\implement\CategoriaRepositorio.class
 com\virtuatech\gestao_de_treinamentos\modelo\entidade\ListaDeTreinamento.class
+com\virtuatech\gestao_de_treinamentos\modelo\util\SQLFormatoInserir.class
 com\virtuatech\gestao_de_treinamentos\modelo\entidade\Categoria$CategoriaBuilder.class
+com\virtuatech\gestao_de_treinamentos\modelo\util\SQLFormatoAtualizar.class
 com\virtuatech\gestao_de_treinamentos\modelo\entidade\Treinamento$TreinamentoBuilder.class
 com\virtuatech\gestao_de_treinamentos\modelo\entidade\Treinamento.class
 com\virtuatech\gestao_de_treinamentos\modelo\entidade\Cliente.class
 com\virtuatech\gestao_de_treinamentos\modelo\entidade\Usuario$UsuarioBuilder.class
+com\virtuatech\gestao_de_treinamentos\modelo\repositorio\CrudRepositorio.class
 com\virtuatech\gestao_de_treinamentos\modelo\entidade\Categoria.class
+com\virtuatech\gestao_de_treinamentos\modelo\repositorio\implement\CrudRepositorioImplement.class

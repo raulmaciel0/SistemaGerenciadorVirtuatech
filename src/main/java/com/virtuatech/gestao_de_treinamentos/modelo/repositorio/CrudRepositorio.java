@@ -3,11 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
  */
 package com.virtuatech.gestao_de_treinamentos.modelo.repositorio;
-
-/**
- *
- * @author Renato
- */
-public interface CrudRepositorio {
-    
+public interface CrudRepositorio<T> {
+    public boolean salvar(T t);
 }
