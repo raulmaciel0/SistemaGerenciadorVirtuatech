@@ -14,9 +14,11 @@ import java.lang.reflect.Method;
 import java.math.BigDecimal;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLOutput;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 import org.reflections.ReflectionUtils;
 
@@ -174,5 +176,50 @@ public abstract class CrudRepositorioImplement<T> implements CrudRepositorio<T>{
         
         return "";
     }
+
+    @Override
+    public Optional<T> buscarPeloId(Long id) {
+        try {
+            String SQL = String.format("SELECT * FROM %s WHERE id = ?", t.getSimpleName());
+            System.out.println("SQL--------->>>>>>>>: " + SQL);
+            
+            PreparedStatement ps = ConexaoMySQL.obterConexao().prepareStatement(SQL);
+            ps.setLong(1, id);
+            
+            ResultSet resultSet = ps.executeQuery();
+            
+            if(resultSet.next()){
+                return Optional.ofNullable(getT(resultSet));
+            }
+            
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        
+        return Optional.empty();
+    }
+
+    @Override
+    public boolean removerPeloID(Long id) {
+       try {
+            String SQL = String.format("DELETE FROM %s WHERE id = ?", t.getSimpleName());
+            
+            PreparedStatement ps = ConexaoMySQL.obterConexao().prepareStatement(SQL);
+            ps.setLong(1, id);
+            
+            int resultado = ps.executeUpdate();
+            
+            return resultado == 1;
+            
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        
+        
+    }
+    
+    
+    
+    
     
 }

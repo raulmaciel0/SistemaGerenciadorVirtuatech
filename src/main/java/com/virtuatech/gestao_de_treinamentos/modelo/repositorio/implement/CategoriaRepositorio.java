@@ -11,12 +11,12 @@ public class CategoriaRepositorio extends CrudRepositorioImplement{
     
     public static void main(String[] args) {
         Categoria categoria = Categoria.builder()
-                .id(2L)
-                .nome("Solda")
-                .descricao("Treinamento de soldagem")
+                .id(4L)
+                .nome("Teste")
+                .descricao("testagem")
                 .build();
         
         CategoriaRepositorio repositorio = new CategoriaRepositorio();
-        System.out.println("Resultado: " + repositorio.buscarTodos());
+        System.out.println("Resultado: " + repositorio.removerPeloID(4L));
     }
 }

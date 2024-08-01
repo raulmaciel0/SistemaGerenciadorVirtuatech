@@ -5,9 +5,12 @@
 package com.virtuatech.gestao_de_treinamentos.modelo.repositorio;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface CrudRepositorio<T> {
     public boolean salvar(T t);
     public List<T> buscarTodos();
+    public Optional<T> buscarPeloId(Long id);
+    public boolean removerPeloID(Long id);
     
 }
