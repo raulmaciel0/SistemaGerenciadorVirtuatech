@@ -17,6 +17,6 @@ public class CategoriaRepositorio extends CrudRepositorioImplement{
                 .build();
         
         CategoriaRepositorio repositorio = new CategoriaRepositorio();
-        System.out.println("Resultado: " + repositorio.salvar(categoria));
+        System.out.println("Resultado: " + repositorio.buscarTodos());
     }
 }
