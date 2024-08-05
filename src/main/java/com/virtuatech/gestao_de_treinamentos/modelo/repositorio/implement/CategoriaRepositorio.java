@@ -16,6 +16,8 @@ public class CategoriaRepositorio extends CrudRepositorioImplement{
                 .descricao("testagem")
                 .build();
         
+        
+        
         CategoriaRepositorio repositorio = new CategoriaRepositorio();
         System.out.println("Resultado: " + repositorio.removerPeloID(4L));
     }
