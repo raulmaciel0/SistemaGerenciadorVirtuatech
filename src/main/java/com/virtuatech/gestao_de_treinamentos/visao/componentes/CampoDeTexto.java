@@ -36,7 +36,7 @@ public class CampoDeTexto extends JTextField{
         graphics2D.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
         
         graphics2D.setColor(cor);
-        graphics2D.fillRoundRect(0, 0, getWidth(), getHeight(), 5, 5);
+        graphics2D.fillRoundRect(0, 0, getWidth(), getHeight(), 25, 25);
         
         paintIcon(g);
               

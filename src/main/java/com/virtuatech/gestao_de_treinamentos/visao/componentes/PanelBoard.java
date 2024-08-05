@@ -27,7 +27,7 @@ public class PanelBoard extends javax.swing.JPanel {
         GradientPaint gradientPaint = new GradientPaint(0, 0, cor1, getWidth(), getHeight(), cor2);
         graphics2D.setPaint(gradientPaint);
         
-        graphics2D.fillRoundRect(0, 0, getWidth(), getHeight(), 15, 15);
+        graphics2D.fillRoundRect(0, 0, getWidth(), getHeight(), 25, 25);
         
         super.paintComponent(g); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
     }
