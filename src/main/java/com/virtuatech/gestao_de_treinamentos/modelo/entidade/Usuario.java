@@ -22,4 +22,6 @@ public class Usuario {
     private Boolean estado;
     private LocalDateTime dataCriacao;
     private LocalDateTime ultimoLogin;
+    private String email;
+    private String senha;
 }
