@@ -11,11 +11,13 @@ public class PanelBoard extends javax.swing.JPanel {
     
     private Color cor1;
     private Color cor2;
+    private Color cor3;
 
     public PanelBoard() {
         initComponents();
         cor1 = getBackground();
         cor2 = getBackground();
+        cor3 = Color.BLACK;
         setOpaque(false);
     }
 
@@ -26,8 +28,9 @@ public class PanelBoard extends javax.swing.JPanel {
         
         GradientPaint gradientPaint = new GradientPaint(0, 0, cor1, getWidth(), getHeight(), cor2);
         graphics2D.setPaint(gradientPaint);
-        
         graphics2D.fillRoundRect(0, 0, getWidth(), getHeight(), 25, 25);
+               
+        
         
         super.paintComponent(g); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
     }
@@ -46,6 +49,14 @@ public class PanelBoard extends javax.swing.JPanel {
 
     public void setCor2(Color cor2) {
         this.cor2 = cor2;
+    }
+
+    public Color getCor3() {
+        return cor3;
+    }
+
+    public void setCor3(Color cor3) {
+        this.cor3 = cor3;
     }
     
     

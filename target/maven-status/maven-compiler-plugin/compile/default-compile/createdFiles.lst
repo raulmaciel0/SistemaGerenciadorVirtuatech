@@ -5,6 +5,7 @@ com\virtuatech\gestao_de_treinamentos\modelo\util\SQLFormato.class
 com\virtuatech\gestao_de_treinamentos\modelo\entidade\ListaDeTreinamento$ListaDeTreinamentoBuilder.class
 com\virtuatech\gestao_de_treinamentos\modelo\entidade\Permissao.class
 com\virtuatech\gestao_de_treinamentos\modelo\entidade\Cliente$ClienteBuilder.class
+com\virtuatech\gestao_de_treinamentos\visao\componentes\Mensagem$TipoMensagem.class
 com\virtuatech\gestao_de_treinamentos\modelo\entidade\PermissaoUsuario.class
 com\virtuatech\gestao_de_treinamentos\visao\componentes\CampoDeSenha.class
 com\virtuatech\gestao_de_treinamentos\visao\formulario\Login$1.class
@@ -28,6 +29,7 @@ com\virtuatech\gestao_de_treinamentos\modelo\entidade\ListaDeTreinamento.class
 com\virtuatech\gestao_de_treinamentos\modelo\util\SQLFormatoInserir.class
 com\virtuatech\gestao_de_treinamentos\modelo\entidade\Categoria$CategoriaBuilder.class
 com\virtuatech\gestao_de_treinamentos\modelo\entidade\Treinamento.class
+com\virtuatech\gestao_de_treinamentos\visao\componentes\Mensagem.class
 com\virtuatech\gestao_de_treinamentos\modelo\entidade\Categoria.class
 com\virtuatech\gestao_de_treinamentos\visao\componentes\Botao$1.class
 com\virtuatech\gestao_de_treinamentos\visao\formulario\Login$3.class

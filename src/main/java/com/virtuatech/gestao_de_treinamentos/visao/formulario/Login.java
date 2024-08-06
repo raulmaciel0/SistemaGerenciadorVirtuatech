@@ -32,13 +32,16 @@ public class Login extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         botao1 = new com.virtuatech.gestao_de_treinamentos.visao.componentes.Botao();
-        jLabel5 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
         background = new javax.swing.JLayeredPane();
 
         panelBoard1.setCor1(new java.awt.Color(51, 0, 153));
         panelBoard1.setCor2(new java.awt.Color(69, 30, 161));
+        panelBoard1.setMinimumSize(new java.awt.Dimension(412, 290));
+        panelBoard1.setPreferredSize(new java.awt.Dimension(412, 290));
         panelBoard1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setOpaque(false);
@@ -58,25 +61,25 @@ public class Login extends javax.swing.JFrame {
 
         campoDeTexto1.setCor(new java.awt.Color(255, 255, 255));
         campoDeTexto1.setDicas("Colaborador");
-        campoDeTexto1.setPrefixoIcon(new javax.swing.ImageIcon("C:\\Users\\Renato\\Downloads\\icon\\user.png")); // NOI18N
+        campoDeTexto1.setPrefixoIcon(new javax.swing.ImageIcon("C:\\temp\\ws-netbeans-22\\gestao_de_treinamentos\\src\\icon\\user.png")); // NOI18N
         campoDeTexto1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campoDeTexto1ActionPerformed(evt);
             }
         });
-        panelBoard1.add(campoDeTexto1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 250, -1));
+        panelBoard1.add(campoDeTexto1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 140, 260, -1));
 
         campoDeSenha1.setCor(new java.awt.Color(255, 255, 255));
         campoDeSenha1.setDicas("Senha");
-        campoDeSenha1.setPrefixoIcon(new javax.swing.ImageIcon("C:\\Users\\Renato\\Downloads\\icon\\pass.png")); // NOI18N
-        panelBoard1.add(campoDeSenha1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 250, -1));
+        campoDeSenha1.setPrefixoIcon(new javax.swing.ImageIcon("C:\\temp\\ws-netbeans-22\\gestao_de_treinamentos\\src\\icon\\pass.png")); // NOI18N
+        panelBoard1.add(campoDeSenha1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 190, 260, -1));
 
         jLabel1.setFont(new java.awt.Font("Gill Sans MT", 1, 14)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Renato\\Downloads\\icon\\virtualogoWhite.png")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\temp\\ws-netbeans-22\\gestao_de_treinamentos\\src\\icon\\virtualogoWhite.png")); // NOI18N
         jLabel1.setMaximumSize(new java.awt.Dimension(1014, 889));
         jLabel1.setMinimumSize(new java.awt.Dimension(1014, 889));
-        panelBoard1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 20, 100, -1));
+        panelBoard1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 40, 100, -1));
         panelBoard1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
         panelBoard1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(62, 0, -1, -1));
 
@@ -89,16 +92,16 @@ public class Login extends javax.swing.JFrame {
                 botao1ActionPerformed(evt);
             }
         });
-        panelBoard1.add(botao1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 220, 150, 36));
-
-        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\Renato\\Downloads\\icon\\001.png")); // NOI18N
-        panelBoard1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        panelBoard1.add(botao1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 240, 260, 36));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("X");
-        panelBoard1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 10, 33, 25));
+        panelBoard1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 20, 33, 25));
+
+        jLabel7.setIcon(new javax.swing.ImageIcon("C:\\temp\\ws-netbeans-22\\gestao_de_treinamentos\\src\\icon\\001.png")); // NOI18N
+        panelBoard1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 430, 320));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -111,6 +114,8 @@ public class Login extends javax.swing.JFrame {
             .addGap(0, 100, Short.MAX_VALUE)
         );
 
+        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\Renato\\Downloads\\icon\\001.png")); // NOI18N
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
 
@@ -118,11 +123,11 @@ public class Login extends javax.swing.JFrame {
         background.setLayout(backgroundLayout);
         backgroundLayout.setHorizontalGroup(
             backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 412, Short.MAX_VALUE)
+            .addGap(0, 440, Short.MAX_VALUE)
         );
         backgroundLayout.setVerticalGroup(
             backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 290, Short.MAX_VALUE)
+            .addGap(0, 320, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -192,6 +197,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private com.virtuatech.gestao_de_treinamentos.visao.componentes.PanelBoard panelBoard1;
