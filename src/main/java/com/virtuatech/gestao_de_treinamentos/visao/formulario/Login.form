@@ -45,7 +45,7 @@
             </DimensionLayout>
           </Layout>
         </Container>
-        <Component class="com.virtuatech.gestao_de_treinamentos.visao.componentes.CampoDeTexto" name="campoDeTexto1">
+        <Component class="com.virtuatech.gestao_de_treinamentos.visao.componentes.CampoDeTexto" name="campoDeTextoColaborador">
           <Properties>
             <Property name="cor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -56,7 +56,7 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="campoDeTexto1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="campoDeTextoColaboradorActionPerformed"/>
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -64,7 +64,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="com.virtuatech.gestao_de_treinamentos.visao.componentes.CampoDeSenha" name="campoDeSenha1">
+        <Component class="com.virtuatech.gestao_de_treinamentos.visao.componentes.CampoDeSenha" name="campoDeSenha">
           <Properties>
             <Property name="cor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -116,7 +116,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="com.virtuatech.gestao_de_treinamentos.visao.componentes.Botao" name="botao1">
+        <Component class="com.virtuatech.gestao_de_treinamentos.visao.componentes.Botao" name="botaoLogin">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="66" green="0" red="33" type="rgb"/>
@@ -130,7 +130,7 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botao1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botaoLoginActionPerformed"/>
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">

@@ -1,6 +1,12 @@
 
 package com.virtuatech.gestao_de_treinamentos.visao.formulario;
 
+import com.virtuatech.gestao_de_treinamentos.controlador.LoginControlador;
+import com.virtuatech.gestao_de_treinamentos.visao.componentes.Botao;
+import com.virtuatech.gestao_de_treinamentos.visao.componentes.CampoDeSenha;
+import com.virtuatech.gestao_de_treinamentos.visao.componentes.CampoDeTexto;
+import com.virtuatech.gestao_de_treinamentos.visao.componentes.PanelCarregar;
+import com.virtuatech.gestao_de_treinamentos.visao.util.MensagemUtil;
 import java.awt.Color;
 import net.miginfocom.swing.MigLayout;
 
@@ -8,17 +14,52 @@ import net.miginfocom.swing.MigLayout;
 public class Login extends javax.swing.JFrame {
     
     private MigLayout layout;
+    private PanelCarregar panelCarregar;
+    private MensagemUtil mensagemUtil;
+    private LoginControlador loginControlador;
 
     public Login() {
         initComponents();
         setLocationRelativeTo(null);
         setBackground(new Color(0, 0, 0, 0));
+        loginControlador = new LoginControlador(this);  
         
         layout = new MigLayout("fill, insets");
-        background.setLayout(layout);
+        panelCarregar = new PanelCarregar();
         
+        background.setLayout(layout);
+        background.add(panelCarregar, "pos 0 0 100% 100%");
         background.add(panelBoard1, "pos 0 0 100% 100%");
+        
+        mensagemUtil = new MensagemUtil(background, layout);
+        evento();
     }
+    
+    private void evento(){
+        botaoLogin.addActionListener(loginControlador);
+    }
+
+    public MensagemUtil getMensagemUtil() {
+        return mensagemUtil;
+    }
+
+    public PanelCarregar getPanelCarregar() {
+        return panelCarregar;
+    }
+
+    public CampoDeSenha getCampoDeSenha() {
+        return campoDeSenha;
+    }
+
+    public CampoDeTexto getCampoDeTextoColaborador() {
+        return campoDeTextoColaborador;
+    }
+
+    public Botao getBotaoLogin() {
+        return botaoLogin;
+    }
+    
+    
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -26,12 +67,12 @@ public class Login extends javax.swing.JFrame {
 
         panelBoard1 = new com.virtuatech.gestao_de_treinamentos.visao.componentes.PanelBoard();
         jPanel1 = new javax.swing.JPanel();
-        campoDeTexto1 = new com.virtuatech.gestao_de_treinamentos.visao.componentes.CampoDeTexto();
-        campoDeSenha1 = new com.virtuatech.gestao_de_treinamentos.visao.componentes.CampoDeSenha();
+        campoDeTextoColaborador = new com.virtuatech.gestao_de_treinamentos.visao.componentes.CampoDeTexto();
+        campoDeSenha = new com.virtuatech.gestao_de_treinamentos.visao.componentes.CampoDeSenha();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        botao1 = new com.virtuatech.gestao_de_treinamentos.visao.componentes.Botao();
+        botaoLogin = new com.virtuatech.gestao_de_treinamentos.visao.componentes.Botao();
         jLabel2 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
@@ -59,20 +100,20 @@ public class Login extends javax.swing.JFrame {
 
         panelBoard1.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(633, 0, -1, -1));
 
-        campoDeTexto1.setCor(new java.awt.Color(255, 255, 255));
-        campoDeTexto1.setDicas("Colaborador");
-        campoDeTexto1.setPrefixoIcon(new javax.swing.ImageIcon("C:\\temp\\ws-netbeans-22\\gestao_de_treinamentos\\src\\icon\\user.png")); // NOI18N
-        campoDeTexto1.addActionListener(new java.awt.event.ActionListener() {
+        campoDeTextoColaborador.setCor(new java.awt.Color(255, 255, 255));
+        campoDeTextoColaborador.setDicas("Colaborador");
+        campoDeTextoColaborador.setPrefixoIcon(new javax.swing.ImageIcon("C:\\temp\\ws-netbeans-22\\gestao_de_treinamentos\\src\\icon\\user.png")); // NOI18N
+        campoDeTextoColaborador.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoDeTexto1ActionPerformed(evt);
+                campoDeTextoColaboradorActionPerformed(evt);
             }
         });
-        panelBoard1.add(campoDeTexto1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 140, 260, -1));
+        panelBoard1.add(campoDeTextoColaborador, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 140, 260, -1));
 
-        campoDeSenha1.setCor(new java.awt.Color(255, 255, 255));
-        campoDeSenha1.setDicas("Senha");
-        campoDeSenha1.setPrefixoIcon(new javax.swing.ImageIcon("C:\\temp\\ws-netbeans-22\\gestao_de_treinamentos\\src\\icon\\pass.png")); // NOI18N
-        panelBoard1.add(campoDeSenha1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 190, 260, -1));
+        campoDeSenha.setCor(new java.awt.Color(255, 255, 255));
+        campoDeSenha.setDicas("Senha");
+        campoDeSenha.setPrefixoIcon(new javax.swing.ImageIcon("C:\\temp\\ws-netbeans-22\\gestao_de_treinamentos\\src\\icon\\pass.png")); // NOI18N
+        panelBoard1.add(campoDeSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 190, 260, -1));
 
         jLabel1.setFont(new java.awt.Font("Gill Sans MT", 1, 14)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -83,16 +124,16 @@ public class Login extends javax.swing.JFrame {
         panelBoard1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
         panelBoard1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(62, 0, -1, -1));
 
-        botao1.setBackground(new java.awt.Color(51, 0, 102));
-        botao1.setForeground(new java.awt.Color(204, 204, 204));
-        botao1.setText("Login");
-        botao1.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
-        botao1.addActionListener(new java.awt.event.ActionListener() {
+        botaoLogin.setBackground(new java.awt.Color(51, 0, 102));
+        botaoLogin.setForeground(new java.awt.Color(204, 204, 204));
+        botaoLogin.setText("Login");
+        botaoLogin.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
+        botaoLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botao1ActionPerformed(evt);
+                botaoLoginActionPerformed(evt);
             }
         });
-        panelBoard1.add(botao1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 240, 260, 36));
+        panelBoard1.add(botaoLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 240, 260, 36));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -144,13 +185,13 @@ public class Login extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void campoDeTexto1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoDeTexto1ActionPerformed
+    private void campoDeTextoColaboradorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoDeTextoColaboradorActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_campoDeTexto1ActionPerformed
+    }//GEN-LAST:event_campoDeTextoColaboradorActionPerformed
 
-    private void botao1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botao1ActionPerformed
+    private void botaoLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoLoginActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_botao1ActionPerformed
+    }//GEN-LAST:event_botaoLoginActionPerformed
 
     /**
      * @param args the command line arguments
@@ -189,9 +230,9 @@ public class Login extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLayeredPane background;
-    private com.virtuatech.gestao_de_treinamentos.visao.componentes.Botao botao1;
-    private com.virtuatech.gestao_de_treinamentos.visao.componentes.CampoDeSenha campoDeSenha1;
-    private com.virtuatech.gestao_de_treinamentos.visao.componentes.CampoDeTexto campoDeTexto1;
+    private com.virtuatech.gestao_de_treinamentos.visao.componentes.Botao botaoLogin;
+    private com.virtuatech.gestao_de_treinamentos.visao.componentes.CampoDeSenha campoDeSenha;
+    private com.virtuatech.gestao_de_treinamentos.visao.componentes.CampoDeTexto campoDeTextoColaborador;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

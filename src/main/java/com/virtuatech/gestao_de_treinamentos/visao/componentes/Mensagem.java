@@ -7,6 +7,7 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 
 public class Mensagem extends javax.swing.JPanel {
     
@@ -27,7 +28,7 @@ public class Mensagem extends javax.swing.JPanel {
            this.tipoMensagem = tipo;
            labelMensagem.setText(mensagem);
            
-           String caminho = System.getProperty("user.dir") + "\\src\\main\\java\\com\\virtuatech\\gestao_de_treinamentos\\visao\\icon\\sucesso.png";
+           String caminho = System.getProperty("user.dir") + "\\src\\main\\java\\com\\virtuatech\\gestao_de_treinamentos\\visao\\icon\\";
            
            if(tipo.equals(tipo.SUCESSO)){
                labelMensagem.setIcon(new ImageIcon(caminho + "sucesso.png"));
@@ -44,7 +45,7 @@ public class Mensagem extends javax.swing.JPanel {
         if (this.tipoMensagem == TipoMensagem.SUCESSO){
             graphics2D.setColor(new Color(15, 174, 34));
         }else{
-            graphics2D.setColor(new Color(240,52,53));
+            graphics2D.setColor(new Color(197,42,43));
         }
         
         graphics2D.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 0.9f));
@@ -55,6 +56,30 @@ public class Mensagem extends javax.swing.JPanel {
         graphics2D.drawRect(0, 0, getWidth() - 1, getHeight());
         
         super.paintComponent(g); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
+    }
+
+    public TipoMensagem getTipoMensagem() {
+        return tipoMensagem;
+    }
+
+    public void setTipoMensagem(TipoMensagem tipoMensagem) {
+        this.tipoMensagem = tipoMensagem;
+    }
+
+    public boolean isMostrar() {
+        return mostrar;
+    }
+
+    public void setMostrar(boolean mostrar) {
+        this.mostrar = mostrar;
+    }
+
+    public JLabel getLabelMensagem() {
+        return labelMensagem;
+    }
+
+    public void setLabelMensagem(JLabel labelMensagem) {
+        this.labelMensagem = labelMensagem;
     }
     
     
