@@ -10,6 +10,7 @@ com\virtuatech\gestao_de_treinamentos\visao\componentes\Mensagem$TipoMensagem.cl
 com\virtuatech\gestao_de_treinamentos\modelo\entidade\PermissaoUsuario.class
 com\virtuatech\gestao_de_treinamentos\visao\componentes\CampoDeSenha.class
 com\virtuatech\gestao_de_treinamentos\visao\formulario\Login$1.class
+com\virtuatech\gestao_de_treinamentos\visao\formulario\Dashboard.class
 com\virtuatech\gestao_de_treinamentos\modelo\util\SQLFormatoAtualizar.class
 com\virtuatech\gestao_de_treinamentos\modelo\entidade\Treinamento$TreinamentoBuilder.class
 com\virtuatech\gestao_de_treinamentos\visao\formulario\Login$2.class
@@ -18,6 +19,7 @@ com\virtuatech\gestao_de_treinamentos\visao\componentes\PanelBoard.class
 com\virtuatech\gestao_de_treinamentos\modelo\entidade\Cliente.class
 com\virtuatech\gestao_de_treinamentos\modelo\entidade\Usuario$UsuarioBuilder.class
 com\virtuatech\gestao_de_treinamentos\modelo\repositorio\CrudRepositorio.class
+com\virtuatech\gestao_de_treinamentos\visao\formulario\Dashboard$1.class
 com\virtuatech\gestao_de_treinamentos\modelo\repositorio\implement\CrudRepositorioImplement.class
 com\virtuatech\gestao_de_treinamentos\visao\componentes\Botao.class
 com\virtuatech\gestao_de_treinamentos\visao\componentes\PanelCarregar.class
@@ -29,8 +31,10 @@ com\virtuatech\gestao_de_treinamentos\modelo\entidade\Permissao$PermissaoBuilder
 com\virtuatech\gestao_de_treinamentos\modelo\repositorio\implement\CategoriaRepositorio.class
 com\virtuatech\gestao_de_treinamentos\visao\util\MensagemUtil.class
 com\virtuatech\gestao_de_treinamentos\modelo\entidade\ListaDeTreinamento.class
+com\virtuatech\gestao_de_treinamentos\modelo\repositorio\implement\UsuarioRepositorioImpl.class
 com\virtuatech\gestao_de_treinamentos\modelo\util\SQLFormatoInserir.class
 com\virtuatech\gestao_de_treinamentos\modelo\entidade\Categoria$CategoriaBuilder.class
+com\virtuatech\gestao_de_treinamentos\modelo\servico\UsuarioServico.class
 com\virtuatech\gestao_de_treinamentos\modelo\entidade\Treinamento.class
 com\virtuatech\gestao_de_treinamentos\visao\componentes\Mensagem.class
 com\virtuatech\gestao_de_treinamentos\modelo\entidade\Categoria.class

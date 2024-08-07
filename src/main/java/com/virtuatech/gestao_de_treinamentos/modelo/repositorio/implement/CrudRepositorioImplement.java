@@ -116,7 +116,7 @@ public abstract class CrudRepositorioImplement<T> implements CrudRepositorio<T>{
         
     }
 
-    private T getT(ResultSet resultSet){
+    public T getT(ResultSet resultSet){
         try {
             T tNovo = t.newInstance();
             Method metodo = null;
