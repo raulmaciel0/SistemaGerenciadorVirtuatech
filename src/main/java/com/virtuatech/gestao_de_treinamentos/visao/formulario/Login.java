@@ -8,6 +8,10 @@ import com.virtuatech.gestao_de_treinamentos.visao.componentes.CampoDeTexto;
 import com.virtuatech.gestao_de_treinamentos.visao.componentes.PanelCarregar;
 import com.virtuatech.gestao_de_treinamentos.visao.util.MensagemUtil;
 import java.awt.Color;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import net.miginfocom.swing.MigLayout;
 
 
@@ -17,6 +21,9 @@ public class Login extends javax.swing.JFrame {
     private PanelCarregar panelCarregar;
     private MensagemUtil mensagemUtil;
     private LoginControlador loginControlador;
+    
+    private int x;
+    private int y;
 
     public Login() {
         initComponents();
@@ -26,13 +33,72 @@ public class Login extends javax.swing.JFrame {
         
         layout = new MigLayout("fill, insets");
         panelCarregar = new PanelCarregar();
+
+        panelMovimento.setOpaque(false);
         
         background.setLayout(layout);
+
         background.add(panelCarregar, "pos 0 0 100% 100%");
         background.add(panelBoard1, "pos 0 0 100% 100%");
         
         mensagemUtil = new MensagemUtil(background, layout);
         evento();
+        moveTelaLogin(this);
+        fechaTela();
+    }
+    
+    private void moveTelaLogin(JFrame frame){
+        panelMovimento.addMouseListener(new MouseAdapter(){
+            @Override
+            public void mousePressed(MouseEvent e) {
+                x = e.getXOnScreen() - frame.getLocation().x;
+                y = e.getYOnScreen() - frame.getLocation().y;
+            }
+            
+        });
+        
+        panelMovimento.addMouseMotionListener(new MouseAdapter(){
+            @Override
+            public void mouseDragged(MouseEvent e) {
+               int newX = e.getXOnScreen() - x;
+               int newY = e.getYOnScreen() - y;
+               frame.setLocation(newX, newY);
+            }
+
+        });
+    }
+    
+    private void fechaTela(){
+        labelFechar.addMouseListener(new MouseAdapter(){
+            @Override
+            public void mousePressed(MouseEvent e) {
+                int opcao = JOptionPane.showConfirmDialog(null, "Realmente deseja sair?", "Sair", JOptionPane.YES_NO_OPTION);
+                if(opcao == JOptionPane.YES_OPTION){
+                    System.exit(0);
+                }
+            }
+        });
+        
+        labelFechar.addMouseListener(new MouseAdapter(){
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                labelFechar.setBackground(Color.RED);
+                labelFechar.setForeground(Color.WHITE);
+                labelFechar.setOpaque(true);
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                labelFechar.setBackground(new Color(0,0,0,0));
+                labelFechar.setForeground(Color.WHITE);
+                labelFechar.setOpaque(false);
+            }
+            
+            
+            
+        });
+        
+        
     }
     
     private void evento(){
@@ -73,8 +139,9 @@ public class Login extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         botaoLogin = new com.virtuatech.gestao_de_treinamentos.visao.componentes.Botao();
-        jLabel2 = new javax.swing.JLabel();
+        labelFechar = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
+        panelMovimento = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         background = new javax.swing.JLayeredPane();
@@ -135,14 +202,27 @@ public class Login extends javax.swing.JFrame {
         });
         panelBoard1.add(botaoLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 240, 260, 36));
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("X");
-        panelBoard1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 20, 33, 25));
+        labelFechar.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        labelFechar.setForeground(new java.awt.Color(255, 255, 255));
+        labelFechar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelFechar.setText("X");
+        panelBoard1.add(labelFechar, new org.netbeans.lib.awtextra.AbsoluteConstraints(363, 20, 30, 25));
 
         jLabel7.setIcon(new javax.swing.ImageIcon("C:\\temp\\ws-netbeans-22\\gestao_de_treinamentos\\src\\icon\\001.png")); // NOI18N
         panelBoard1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 430, 320));
+
+        javax.swing.GroupLayout panelMovimentoLayout = new javax.swing.GroupLayout(panelMovimento);
+        panelMovimento.setLayout(panelMovimentoLayout);
+        panelMovimentoLayout.setHorizontalGroup(
+            panelMovimentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 390, Short.MAX_VALUE)
+        );
+        panelMovimentoLayout.setVerticalGroup(
+            panelMovimentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 40, Short.MAX_VALUE)
+        );
+
+        panelBoard1.add(panelMovimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 390, 40));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -154,8 +234,6 @@ public class Login extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 100, Short.MAX_VALUE)
         );
-
-        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\Renato\\Downloads\\icon\\001.png")); // NOI18N
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -234,13 +312,14 @@ public class Login extends javax.swing.JFrame {
     private com.virtuatech.gestao_de_treinamentos.visao.componentes.CampoDeSenha campoDeSenha;
     private com.virtuatech.gestao_de_treinamentos.visao.componentes.CampoDeTexto campoDeTextoColaborador;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel labelFechar;
     private com.virtuatech.gestao_de_treinamentos.visao.componentes.PanelBoard panelBoard1;
+    private javax.swing.JPanel panelMovimento;
     // End of variables declaration//GEN-END:variables
 }

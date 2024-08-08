@@ -2,6 +2,7 @@ com\virtuatech\gestao_de_treinamentos\modelo\conexao\ConexaoMySQL.class
 com\virtuatech\gestao_de_treinamentos\modelo\entidade\HistoricoTreinamento$HistoricoTreinamentoBuilder.class
 com\virtuatech\gestao_de_treinamentos\modelo\entidade\HistoricoTreinamento.class
 com\virtuatech\gestao_de_treinamentos\modelo\util\SQLFormato.class
+com\virtuatech\gestao_de_treinamentos\visao\formulario\Login$6.class
 com\virtuatech\gestao_de_treinamentos\visao\util\MensagemUtil$1.class
 com\virtuatech\gestao_de_treinamentos\modelo\entidade\ListaDeTreinamento$ListaDeTreinamentoBuilder.class
 com\virtuatech\gestao_de_treinamentos\modelo\entidade\Permissao.class
@@ -16,14 +17,17 @@ com\virtuatech\gestao_de_treinamentos\modelo\entidade\Treinamento$TreinamentoBui
 com\virtuatech\gestao_de_treinamentos\visao\formulario\Login$2.class
 com\virtuatech\gestao_de_treinamentos\visao\componentes\Botao$2.class
 com\virtuatech\gestao_de_treinamentos\visao\componentes\PanelBoard.class
+com\virtuatech\gestao_de_treinamentos\visao\formulario\Login$4.class
 com\virtuatech\gestao_de_treinamentos\modelo\entidade\Cliente.class
 com\virtuatech\gestao_de_treinamentos\modelo\entidade\Usuario$UsuarioBuilder.class
 com\virtuatech\gestao_de_treinamentos\modelo\repositorio\CrudRepositorio.class
 com\virtuatech\gestao_de_treinamentos\visao\formulario\Dashboard$1.class
+com\virtuatech\gestao_de_treinamentos\visao\formulario\Login$7.class
 com\virtuatech\gestao_de_treinamentos\modelo\repositorio\implement\CrudRepositorioImplement.class
 com\virtuatech\gestao_de_treinamentos\visao\componentes\Botao.class
 com\virtuatech\gestao_de_treinamentos\visao\componentes\PanelCarregar.class
 com\virtuatech\gestao_de_treinamentos\visao\formulario\Login.class
+com\virtuatech\gestao_de_treinamentos\visao\formulario\Login$5.class
 com\virtuatech\gestao_de_treinamentos\visao\componentes\CampoDeTexto.class
 com\virtuatech\gestao_de_treinamentos\modelo\entidade\PermissaoUsuario$PermissaoUsuarioBuilder.class
 com\virtuatech\gestao_de_treinamentos\modelo\entidade\Usuario.class
