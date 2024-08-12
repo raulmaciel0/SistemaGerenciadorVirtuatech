@@ -1,6 +1,8 @@
 
 package com.virtuatech.gestao_de_treinamentos.visao.componentes;
 
+import com.virtuatech.gestao_de_treinamentos.visao.modelo.MenuModelo;
+import static com.virtuatech.gestao_de_treinamentos.visao.modelo.MenuModelo.TipoMenu.*;
 import java.awt.Color;
 import java.awt.GradientPaint;
 import java.awt.Graphics;
@@ -14,7 +16,28 @@ public class Menu extends javax.swing.JPanel {
     public Menu() {
         initComponents();
         setOpaque(false);
+        listaMenu1.setOpaque(false);
+        inicializarMenu();
     }
+    
+    private void inicializarMenu(){
+        listaMenu1.adicionarItem(new MenuModelo("1", "Dashboard", MENU));
+        listaMenu1.adicionarItem(new MenuModelo("3", "Treinamento", MENU));
+        listaMenu1.adicionarItem(new MenuModelo("6", "Cadastro Colaborador", MENU));
+        listaMenu1.adicionarItem(new MenuModelo("4", "Iniciar Treinamento", MENU));
+        listaMenu1.adicionarItem(new MenuModelo("8", "Relatórios", MENU));
+        listaMenu1.adicionarItem(new MenuModelo("5", "Backup", MENU));
+        
+        listaMenu1.adicionarItem(new MenuModelo("", " ", VAZIO));
+        
+        listaMenu1.adicionarItem(new MenuModelo("", "Suporte", TITULO));
+        listaMenu1.adicionarItem(new MenuModelo("9", "Fale Conosco", MENU));
+        listaMenu1.adicionarItem(new MenuModelo("10", "Sair", MENU));
+        
+        
+        
+    }
+    
 
     @Override
     protected void paintComponent(Graphics g) {
@@ -45,6 +68,7 @@ public class Menu extends javax.swing.JPanel {
         jLabel2 = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
         jLabel4 = new javax.swing.JLabel();
+        listaMenu1 = new com.virtuatech.gestao_de_treinamentos.visao.componentes.ListaMenu<>();
         jLabel3 = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -62,23 +86,26 @@ public class Menu extends javax.swing.JPanel {
         imageAvatar1.setBorderColor(new java.awt.Color(255, 255, 255));
         imageAvatar1.setBorderSize(1);
         imageAvatar1.setImage(new javax.swing.ImageIcon("C:\\temp\\ws-netbeans-22\\gestao_de_treinamentos\\src\\main\\java\\com\\virtuatech\\gestao_de_treinamentos\\visao\\icon\\imageWorkerClose.png")); // NOI18N
-        add(imageAvatar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 70, 70));
+        add(imageAvatar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 70, 70));
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Cargo");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 150, 130, -1));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, 130, -1));
 
         jSeparator2.setBackground(new java.awt.Color(69, 30, 161));
         jSeparator2.setForeground(new java.awt.Color(69, 30, 161));
-        add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 197, 298, -1));
+        add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 173, 220, 10));
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Nome do Usuario");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 130, 130, -1));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 130, -1));
+
+        listaMenu1.setFont(new java.awt.Font("Papyrus", 0, 12)); // NOI18N
+        add(listaMenu1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 220, 410));
 
         jLabel3.setIcon(new javax.swing.ImageIcon("C:\\temp\\ws-netbeans-22\\gestao_de_treinamentos\\src\\main\\java\\com\\virtuatech\\gestao_de_treinamentos\\visao\\icon\\menuVirtuatech.png")); // NOI18N
         add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 590));
@@ -93,5 +120,6 @@ public class Menu extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
+    private com.virtuatech.gestao_de_treinamentos.visao.componentes.ListaMenu<String> listaMenu1;
     // End of variables declaration//GEN-END:variables
 }

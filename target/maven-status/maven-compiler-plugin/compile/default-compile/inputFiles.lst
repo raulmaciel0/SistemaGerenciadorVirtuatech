@@ -7,6 +7,7 @@ C:\temp\ws-netbeans-22\gestao_de_treinamentos\src\main\java\com\virtuatech\gesta
 C:\temp\ws-netbeans-22\gestao_de_treinamentos\src\main\java\com\virtuatech\gestao_de_treinamentos\modelo\entidade\Usuario.java
 C:\temp\ws-netbeans-22\gestao_de_treinamentos\src\main\java\com\virtuatech\gestao_de_treinamentos\modelo\entidade\Cliente.java
 C:\temp\ws-netbeans-22\gestao_de_treinamentos\src\main\java\com\virtuatech\gestao_de_treinamentos\modelo\repositorio\implement\CrudRepositorioImplement.java
+C:\temp\ws-netbeans-22\gestao_de_treinamentos\src\main\java\com\virtuatech\gestao_de_treinamentos\visao\componentes\ListaMenu.java
 C:\temp\ws-netbeans-22\gestao_de_treinamentos\src\main\java\com\virtuatech\gestao_de_treinamentos\visao\componentes\ImageAvatar.java
 C:\temp\ws-netbeans-22\gestao_de_treinamentos\src\main\java\com\virtuatech\gestao_de_treinamentos\modelo\conexao\ConexaoMySQL.java
 C:\temp\ws-netbeans-22\gestao_de_treinamentos\src\main\java\com\virtuatech\gestao_de_treinamentos\visao\util\MensagemUtil.java
@@ -19,11 +20,13 @@ C:\temp\ws-netbeans-22\gestao_de_treinamentos\src\main\java\com\virtuatech\gesta
 C:\temp\ws-netbeans-22\gestao_de_treinamentos\src\main\java\com\virtuatech\gestao_de_treinamentos\modelo\util\SQLFormato.java
 C:\temp\ws-netbeans-22\gestao_de_treinamentos\src\main\java\com\virtuatech\gestao_de_treinamentos\modelo\entidade\HistoricoTreinamento.java
 C:\temp\ws-netbeans-22\gestao_de_treinamentos\src\main\java\com\virtuatech\gestao_de_treinamentos\visao\formulario\Login.java
+C:\temp\ws-netbeans-22\gestao_de_treinamentos\src\main\java\com\virtuatech\gestao_de_treinamentos\visao\componentes\MenuItem.java
 C:\temp\ws-netbeans-22\gestao_de_treinamentos\src\main\java\com\virtuatech\gestao_de_treinamentos\modelo\util\SQLFormatoInserir.java
 C:\temp\ws-netbeans-22\gestao_de_treinamentos\src\main\java\com\virtuatech\gestao_de_treinamentos\modelo\util\SQLFormatoAtualizar.java
 C:\temp\ws-netbeans-22\gestao_de_treinamentos\src\main\java\com\virtuatech\gestao_de_treinamentos\controlador\LoginControlador.java
 C:\temp\ws-netbeans-22\gestao_de_treinamentos\src\main\java\com\virtuatech\gestao_de_treinamentos\modelo\entidade\ListaDeTreinamento.java
 C:\temp\ws-netbeans-22\gestao_de_treinamentos\src\main\java\com\virtuatech\gestao_de_treinamentos\modelo\entidade\PermissaoUsuario.java
+C:\temp\ws-netbeans-22\gestao_de_treinamentos\src\main\java\com\virtuatech\gestao_de_treinamentos\visao\modelo\MenuModelo.java
 C:\temp\ws-netbeans-22\gestao_de_treinamentos\src\main\java\com\virtuatech\gestao_de_treinamentos\visao\formulario\Dashboard.java
 C:\temp\ws-netbeans-22\gestao_de_treinamentos\src\main\java\com\virtuatech\gestao_de_treinamentos\visao\componentes\Botao.java
 C:\temp\ws-netbeans-22\gestao_de_treinamentos\src\main\java\com\virtuatech\gestao_de_treinamentos\modelo\entidade\Permissao.java
