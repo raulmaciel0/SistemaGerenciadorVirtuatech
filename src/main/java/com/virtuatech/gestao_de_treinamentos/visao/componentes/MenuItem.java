@@ -3,9 +3,13 @@ package com.virtuatech.gestao_de_treinamentos.visao.componentes;
 
 import com.virtuatech.gestao_de_treinamentos.visao.modelo.MenuModelo;
 import java.awt.Color;
+import java.awt.Font;
+import java.awt.FontFormatException;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
+import java.io.File;
+import java.io.IOException;
 
 public class MenuItem extends javax.swing.JPanel {
 
@@ -16,10 +20,23 @@ public class MenuItem extends javax.swing.JPanel {
         initComponents();
         setOpaque(over);
         
+        Font customFont = null;
+        try{
+            customFont = loadCustomFont("src\\main\\java\\com\\virtuatech\\gestao_de_treinamentos\\visao\\util\\font\\PTSans-Bold.OTF", 13f);
+            
+        }
+        catch(IOException e){
+            e.printStackTrace();
+        }
+        
         switch (menuModelo.getTipoMenu()) {
             case MENU -> {
                 LabelMenuItemIcon.setIcon(menuModelo.toIcon());
                 LabelMenuItemTexto.setText(menuModelo.getNome());
+                if (customFont != null) {
+                    LabelMenuItemTexto.setFont(customFont);
+                    
+                }
             }
             case TITULO -> {
                 LabelMenuItemIcon.setText(menuModelo.getNome());
@@ -33,6 +50,17 @@ public class MenuItem extends javax.swing.JPanel {
             
         }
     }
+    
+    private Font loadCustomFont(String path, float size) throws IOException {
+        try {
+            Font font = Font.createFont(Font.TRUETYPE_FONT, new File(path));
+            return font.deriveFont(Font.PLAIN, size);
+        } catch (FontFormatException | IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+    
 
     @Override
     protected void paintComponent(Graphics g) {
@@ -102,4 +130,6 @@ public class MenuItem extends javax.swing.JPanel {
     private javax.swing.JLabel LabelMenuItemIcon;
     private javax.swing.JLabel LabelMenuItemTexto;
     // End of variables declaration//GEN-END:variables
+
+
 }

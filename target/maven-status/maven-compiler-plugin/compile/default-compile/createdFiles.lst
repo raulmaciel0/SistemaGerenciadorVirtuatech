@@ -29,6 +29,7 @@ com\virtuatech\gestao_de_treinamentos\modelo\conexao\ConexaoMySQL.class
 com\virtuatech\gestao_de_treinamentos\modelo\entidade\HistoricoTreinamento.class
 com\virtuatech\gestao_de_treinamentos\visao\componentes\MenuItem$1.class
 com\virtuatech\gestao_de_treinamentos\visao\formulario\Login$6.class
+com\virtuatech\gestao_de_treinamentos\visao\util\CustomFontMyriad.class
 com\virtuatech\gestao_de_treinamentos\modelo\entidade\Permissao.class
 com\virtuatech\gestao_de_treinamentos\modelo\entidade\PermissaoUsuario.class
 com\virtuatech\gestao_de_treinamentos\visao\componentes\ListaMenu.class

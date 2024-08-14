@@ -4,10 +4,14 @@ package com.virtuatech.gestao_de_treinamentos.visao.componentes;
 import com.virtuatech.gestao_de_treinamentos.visao.modelo.MenuModelo;
 import static com.virtuatech.gestao_de_treinamentos.visao.modelo.MenuModelo.TipoMenu.*;
 import java.awt.Color;
+import java.awt.Font;
+import java.awt.FontFormatException;
 import java.awt.GradientPaint;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
+import java.io.File;
+import java.io.IOException;
 
 
 public class Menu extends javax.swing.JPanel {
@@ -18,6 +22,30 @@ public class Menu extends javax.swing.JPanel {
         setOpaque(false);
         listaMenu1.setOpaque(false);
         inicializarMenu();
+        
+        Font customFont = null;
+        try{
+            customFont = loadCustomFont("src\\main\\java\\com\\virtuatech\\gestao_de_treinamentos\\visao\\util\\font\\PTSans-Bold.OTF", 13f);
+            
+        }
+        catch(IOException e){
+            e.printStackTrace();
+        }
+        
+        if (customFont != null) {
+            cargoLabel.setFont(customFont);
+            nomeDeUsuarioLabel.setFont(customFont);
+        }
+    }
+    
+    private Font loadCustomFont(String path, float size) throws IOException {
+        try {
+            Font font = Font.createFont(Font.TRUETYPE_FONT, new File(path));
+            return font.deriveFont(Font.PLAIN, size);
+        } catch (FontFormatException | IOException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
     
     private void inicializarMenu(){
@@ -65,9 +93,9 @@ public class Menu extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         imageAvatar1 = new com.virtuatech.gestao_de_treinamentos.visao.componentes.ImageAvatar();
-        jLabel2 = new javax.swing.JLabel();
+        cargoLabel = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
-        jLabel4 = new javax.swing.JLabel();
+        nomeDeUsuarioLabel = new javax.swing.JLabel();
         listaMenu1 = new com.virtuatech.gestao_de_treinamentos.visao.componentes.ListaMenu<>();
         jLabel3 = new javax.swing.JLabel();
 
@@ -88,21 +116,19 @@ public class Menu extends javax.swing.JPanel {
         imageAvatar1.setImage(new javax.swing.ImageIcon("C:\\temp\\ws-netbeans-22\\gestao_de_treinamentos\\src\\main\\java\\com\\virtuatech\\gestao_de_treinamentos\\visao\\icon\\imageWorkerClose.png")); // NOI18N
         add(imageAvatar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 70, 70));
 
-        jLabel2.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Cargo");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, 130, -1));
+        cargoLabel.setForeground(new java.awt.Color(255, 255, 255));
+        cargoLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cargoLabel.setText("Cargo");
+        add(cargoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, 130, -1));
 
         jSeparator2.setBackground(new java.awt.Color(69, 30, 161));
         jSeparator2.setForeground(new java.awt.Color(69, 30, 161));
         add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 173, 220, 10));
 
-        jLabel4.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("Nome do Usuario");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 130, -1));
+        nomeDeUsuarioLabel.setForeground(new java.awt.Color(255, 255, 255));
+        nomeDeUsuarioLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        nomeDeUsuarioLabel.setText("Nome do Usuario");
+        add(nomeDeUsuarioLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 130, -1));
 
         listaMenu1.setFont(new java.awt.Font("Papyrus", 0, 12)); // NOI18N
         add(listaMenu1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 220, 410));
@@ -113,13 +139,13 @@ public class Menu extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel cargoLabel;
     private com.virtuatech.gestao_de_treinamentos.visao.componentes.ImageAvatar imageAvatar1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private com.virtuatech.gestao_de_treinamentos.visao.componentes.ListaMenu<String> listaMenu1;
+    private javax.swing.JLabel nomeDeUsuarioLabel;
     // End of variables declaration//GEN-END:variables
 }
