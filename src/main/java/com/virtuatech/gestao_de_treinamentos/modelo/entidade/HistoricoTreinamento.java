@@ -19,5 +19,5 @@ public class HistoricoTreinamento {
     private String treinamento;
     private String observacao;
     private LocalDateTime dataCriacao;
-    private Long usario_id;
+    private Long usuario_id;
 }
